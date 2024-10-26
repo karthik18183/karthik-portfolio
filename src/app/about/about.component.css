@@ -1,0 +1,32 @@
+.about-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+  }
+  
+  .job-title {
+    font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
+    font-size: 1px; /* You can adjust the font size as per your design */
+    color: #333333; /* Text color, adjust as needed */
+    margin: 10px 0; /* Adjust margin as necessary */
+}
+
+  .about-section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 36px;
+      margin-bottom: 5px;
+      color: #2c3e50;
+    }
+  
+  .about-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+
+  .about-section p + p {
+    margin-top: 1.5em;
+  }
+  

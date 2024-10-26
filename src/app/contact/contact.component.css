@@ -1,0 +1,77 @@
+.contact-section {
+    padding: 5px;
+    background: linear-gradient(to right, #2c3e50, #4ca1af); /* Keeps the background gradient */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
+  font-size: 1px; /* You can adjust the font size as per your design */
+  /* Text color, adjust as needed */
+}
+
+.contact-title h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px; /* Increased font size */
+    margin: 0;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Increased gap for spacing */
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px; /* Increased font size */
+}
+
+.contact-item img.contact-icon {
+    width: 26px; /* Slightly larger icons */
+    height: 26px;
+}
+
+.contact-item input[type="email"] {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 15px; /* Increased font size */
+    outline: none;
+    cursor: default;
+}
+
+.contact-item a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 15px; /* Increased font size */
+}
+
+.contact-item a:hover {
+    color: #f39c12; /* Hover effect */
+}
+
+.contact-icons {
+    display: flex;
+    gap: 20px; /* Increased gap */
+}
+
+.contact-icons a {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-icons img {
+    width: 35px; /* Slightly larger icons */
+    height: 35px;
+}
+
+.contact-icons a:hover {
+    transform: scale(1.2); /* Increased scaling on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Slightly larger shadow */
+}

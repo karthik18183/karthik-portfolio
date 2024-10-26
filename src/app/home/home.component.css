@@ -1,0 +1,41 @@
+.home {
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw;  /* Full width of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #282c34; /* Adjust background color as necessary */
+    color: white;
+    text-align: center;
+    padding: 0;  /* Remove any extra padding */
+    margin: 0;   /* Ensure no extra margin */
+    box-sizing: border-box;  /* Ensures padding and borders are included in element’s width and height */
+    font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
+    color: #fbf7f7; /* Text color, adjust as needed */
+  }
+  
+  .home h1 {
+    font-size: 3.5em;  /* Adjust size if necessary */
+    margin-bottom: 0.5em;
+  }
+  
+  .home p {
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  
+  .home a {
+    padding: 1em 2.5em;
+    background-color: #61dafb;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+  }
+  
+  .home a:hover {
+    background-color: #21a1f1;
+    color: #fff;
+  }
+   
