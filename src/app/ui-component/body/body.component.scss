@@ -1,0 +1,188 @@
+.word {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 0; /* Initial state to ensure all words start hidden */
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.word {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0px; /* Initial letter spacing */
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  //max-width: 1000px;
+  width: 100%;
+  border: 2px solid #d1c4e9;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.left-section {
+  flex: 1;
+  background-color: #fafafa;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.left-section h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  padding-left: 250px;
+}
+
+.left-section h1 span {
+  display: block;
+}
+
+.left-section p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 30px;
+  padding-left: 250px;
+}
+
+.left-section .button {
+  padding: 10px 20px;
+  border: 1px solid #333;
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  margin-left: 250px;
+}
+
+.left-section .button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.right-section {
+  flex: 1;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.right-section img {
+  width: 600px; /* Adjust as needed */
+  height: 600px; /* Adjust as needed */
+  border-radius: 10%;
+  object-fit: cover; /* Crop the image to focus on the center */
+  object-position: 50% 0%; /* Adjust to center on your face */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    flex: 1;
+    width: 100%;
+  }
+
+  .left-section h1 {
+    font-size: 2rem;
+  }
+
+  .left-section p {
+    font-size: 1rem;
+  }
+
+  .left-section .button {
+    font-size: 0.9rem;
+  }
+
+  .left-section .button {
+    margin-left: 0;
+  }
+
+  .left-section p {
+    padding-left: 0;
+  }
+
+  .left-section h1 {
+    padding-left: 0;
+  }
+}
+
+.about-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em;
+  text-align: center;
+}
+
+.job-title {
+  font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
+  font-size: 1px; /* You can adjust the font size as per your design */
+  color: #333333; /* Text color, adjust as needed */
+  margin: 10px 0; /* Adjust margin as necessary */
+}
+
+.about-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    margin-bottom: 5px;
+    color: #2c3e50;
+  }
+
+.about-section p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #555;
+}
+
+
+.about-section p + p {
+  margin-top: 1.5em;
+}
+
+.animated-title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  overflow: hidden; /* Ensures the text doesn't overflow */
+  white-space: nowrap; /* Keeps text in one line */
+  border-right: 3px solid black; /* Adds a cursor */
+  animation: typing 3s steps(30, end), blink-caret 0.75s step-end 3s;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Blinking caret */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+html {
+  scroll-behavior: smooth;
+}
