@@ -65,23 +65,28 @@
 }
 
 /* Sidebar links */
-.sidenav-content {
-  width: 250px;
-  background-color: #2c3e50;
-  color: white;
-}
+
 
 .sidenav-content a {
-  color: white;
+  color: #1e3a5f;
   text-decoration: none;
   font-size: 18px;
   display: block;
   padding: 10px 20px;
-  transition: color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .sidenav-content a:hover {
-  color: #ffdd57;
+  background-color: #1e3a5f; /* Hover background color */
+  color: #ffdd57; /* Hover text color */
+  border-radius: 4px; /* Rounded corners on hover */
+}
+
+.sidenav-content a.active {
+  background-color: #2d5986; /* Active link background */
+  color: #1e3a5f; /* Active link text color */
+  font-weight: bold;
+  border-left: 5px solid #ffdd57; /* Add left border to active link */
 }
 
 /* Responsive Navigation */
@@ -120,7 +125,6 @@
   border-radius: 23px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-
 }
 
 /* Button hover effect */

@@ -25,24 +25,16 @@
         
         <!-- Header navigation links for larger screens -->
         <div class="nav-links">
-          <a class="nav-link" href="#about-me">Home</a>
-          <a class="nav-link" href="#skills">Skills</a>
-          <a class="nav-link" href="#experience">Experience</a>
-          <a class="nav-link" href="#projects">Projects</a>
-          <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-link" (click)="scrollToSection('about-me')">Home</a>
+          <a class="nav-link" (click)="scrollToSection('skills')">Skills</a>
+          <a class="nav-link" (click)="scrollToSection('experience')">Experience</a>
+          <a class="nav-link" (click)="scrollToSection('projects')">Projects</a>
+          <a class="nav-link" (click)="scrollToSection('contact')">Contact</a>
         </div>
 
         
         
-        <!-- Download Resume button -->
-        <div class="example-button-container">
-          <a href="assets/files/SikkemSaiKarthik_Resume.pdf" download="SikkemSaiKarthik_Resume.pdf">
-            <button mat-fab extended>
-              <mat-icon>cloud_download</mat-icon>
-              Download Resume
-            </button>
-          </a>
-        </div>
+       
       </mat-toolbar>
 
       <!-- Main body content goes here -->
