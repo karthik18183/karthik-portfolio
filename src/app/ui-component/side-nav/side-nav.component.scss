@@ -85,6 +85,28 @@ section {
   --mdc-fab-icon-color: #ffffff !important; /* Icon color */
 }
 
+.example-toolbar {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on small screens */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space items evenly */
+  padding: 8px 16px; /* Adjust padding for better spacing */
+  background-color: #fff; /* Optional: Background color */
+  z-index: 2; /* Keep header above content */
+  position: fixed;
+  top: 0;
+  width: 100%; /* Full width */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for aesthetics */
+}
+
+/* Styling for navigation links */
+.example-toolbar a {
+  text-decoration: none;
+  font-size: 16px; /* Adjust font size for better readability */
+  margin: 0 8px; /* Add spacing between links */
+  color: #333; /* Text color */
+}
+
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
   .example-container {
@@ -103,6 +125,8 @@ section {
     background: #f8f9fa; /* Optional: Toolbar background */
   }
 
+  
+
   .header-button {
     display: none; /* Hide unnecessary header buttons */
   }
@@ -117,4 +141,35 @@ html, body {
 
 .example-sidenav-container {
   height: 100%; /* Prevent vertical overflow */
+}
+
+
+/* General Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef); /* Soft gradient */
+  color: #333;
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background: linear-gradient(to right, #ffffff, #f2f2f2); /* Subtle gradient */
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+  text-decoration: none;
+  color: #0078d4; /* Blue accent for links */
+  font-weight: bold;
+}
+
+header a:hover {
+  color: #005a9e; /* Darker blue on hover */
 }
