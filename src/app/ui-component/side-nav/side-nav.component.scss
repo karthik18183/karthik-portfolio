@@ -1,3 +1,4 @@
+/* General container styles */
 .example-container {
   display: flex;
   flex-direction: column;
@@ -6,44 +7,55 @@
   bottom: 0;
   left: 0;
   right: 0;
+  height: 100%; /* Ensure it stretches the full height */
+  margin: 0;
 }
 
+/* Toolbar styles */
 .example-is-mobile .example-toolbar {
-  position: fixed;
-  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
-  z-index: 2;
+  position: fixed; /* Fix toolbar to top */
+  z-index: 2; /* Ensure it stays on top */
+  padding: 8px; /* Add padding for mobile view */
+  width: 100%;
+  background: white; /* Optional: Toolbar background */
 }
 
+/* App name adjustments */
 .example-app-name {
   margin: 0;
   margin-left: 8px;
+  font-size: 18px; /* Adjust font size for readability */
 }
 
+/* Sidenav container */
 .example-sidenav-container {
-  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
-     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
-  flex: 1;
+  flex: 1; /* Stretch to fill available space */
+  height: auto; /* Let content determine height */
 }
 
 .example-is-mobile .example-sidenav-container {
-  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
-     `<body>` to be our scrolling element for mobile layouts. */
   flex: 1 0 auto;
 }
 
+/* Section styling */
 section {
-  display: table;
+  display: flex; /* Use flex for better layout alignment */
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto; /* Prevent enforced full height */
+  margin: 0;
+  padding: 0;
 }
 
+/* Label and button adjustments */
 .example-label {
-  display: table-cell;
   font-size: 14px;
-  margin-left: 8px;
+  margin: 0;
   min-width: 120px;
 }
 
 .example-button-row {
-  display: table-cell;
   max-width: 600px;
 }
 
@@ -62,6 +74,7 @@ section {
   align-items: center;
 }
 
+/* Header button adjustments */
 .header-button {
   position: absolute;
 }
@@ -70,5 +83,38 @@ section {
 .mat-mdc-mini-fab.mat-accent {
   --mdc-fab-container-color: #000000 !important; /* Background color */
   --mdc-fab-icon-color: #ffffff !important; /* Icon color */
-  //--mat-mdc-fab-color: #000000 !important; /* Background color */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .example-container {
+    flex-direction: column;
+    padding: 0 16px; /* Adjust padding for smaller screens */
+  }
+
+  .example-app-name {
+    font-size: 16px; /* Smaller text for mobile */
+    margin: 8px 0;
+  }
+
+  .example-toolbar {
+    position: static; /* Allow natural scrolling */
+    padding: 8px;
+    background: #f8f9fa; /* Optional: Toolbar background */
+  }
+
+  .header-button {
+    display: none; /* Hide unnecessary header buttons */
+  }
+}
+
+/* Ensure no overflow */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.example-sidenav-container {
+  height: 100%; /* Prevent vertical overflow */
 }
