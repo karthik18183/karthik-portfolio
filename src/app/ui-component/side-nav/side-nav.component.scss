@@ -21,8 +21,9 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1000; /* Ensure it stays above other content */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  height: 56px; /* Fixed height for consistency */
 }
 
 /* Logo Styling */
@@ -64,23 +65,23 @@
   border-bottom: 2px solid #ffdd57;
 }
 
-/* Sidebar links */
-
+/* Sidebar Styling */
 .sidenav-content {
-  width: 250px;
-  background-color: #2c3e50;
+  width: 250px; /* Fixed width */
+  background-color: #2c3e50; /* Same as the header */
   color: white;
-  height: 100%; /* Ensure it takes up the full height */
-  position: fixed; /* Stay fixed for mobile view */
+  height: calc(100% - 56px); /* Full height below the header */
+  position: fixed;
   top: 56px; /* Start below the toolbar */
+  left: 0;
   z-index: 1000;
+  border-right: 1px solid #1e3a5f; /* Optional border */
+  overflow-y: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.mat-sidenav {
-  width: 250px; /* Set the width for the side menu */
-}
 .sidenav-content a {
-  color: #1e3a5f;
+  color: white;
   text-decoration: none;
   font-size: 18px;
   display: block;
@@ -95,10 +96,10 @@
 }
 
 .sidenav-content a.active {
-  background-color: #2d5986; /* Active link background */
-  color: #1e3a5f; /* Active link text color */
+  background-color: #2d5986;
+  color: #ffdd57;
   font-weight: bold;
-  border-left: 5px solid #ffdd57; /* Add left border to active link */
+  border-left: 5px solid #ffdd57;
 }
 
 /* Responsive Navigation */
@@ -113,60 +114,149 @@
   }
 
   .nav-links {
-    display: 
-    none;
+    display: none; /* Hide in mobile */
   }
 
-  .example-sidenav-container {
-    margin-top: 56px; /* Account for the fixed toolbar height */
-  }
-
-  .example-container {
-    padding-top: 56px; /* Prevent content from hiding under the toolbar */
+  .sidenav-content {
+    height: calc(100% - 56px); /* Adjust height for mobile */
   }
 }
 
-/* Adjust the button container */
-.example-button-container {
-  margin-top: 12px; /* Move the button down */
-  margin-right: 10px;
+/* Main Content */
+.mat-sidenav-container {
+  margin-top: 56px; /* Ensure main content starts below the toolbar */
+  overflow: hidden;
+}
+
+.main-content {
+  padding: 16px;
+  background-color: #f8f9fa;
+  overflow-y: auto; /* Allow scrolling for main content */
+}
+
+.main-content section {
+  padding: 16px;
+  margin: 16px 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* General container styling */
+.example-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f8f9fa; /* Light background for the container */
+}
+
+/* Toolbar Styling */
+.example-toolbar {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-}
-
-/* Adjust the button itself */
-.example-button-container button {
-  background-color: #2bb6c0; /* Change to your preferred color */
+  justify-content: space-between;
+  background-color: #2c3e50; /* Navbar background color */
   color: white;
-  font-size: 14px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px; /* Fixed height for the toolbar */
+  z-index: 1000; /* Keep it above other content */
+  padding: 0 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 24px;
   font-weight: bold;
-  border: none;
-  padding: 6px 18px;
-  border-radius: 23px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  color: #ffffff;
 }
 
-/* Button hover effect */
-.example-button-container button:hover {
-  background-color: #2bb6c0; /* Darker shade for hover */
-  transform: translateY(-2px);
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+.logo:hover {
+  color: #ffdd57; /* Highlight color on hover */
 }
 
-/* Adjust button icon alignment */
-.example-button-container button mat-icon {
-  margin-right: 6px;
-  vertical-align: middle;
+/* Navigation Links for Larger Screens */
+.nav-links {
+  display: flex;
+  gap: 20px;
 }
 
-/* Responsive adjustments for the button on mobile */
+.nav-link {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffdd57; /* Highlight on hover */
+}
+
+.nav-link.active {
+  border-bottom: 2px solid #ffdd57; /* Active state */
+  color: #ffdd57;
+}
+
+/* Sidebar Styling */
+.sidenav-content {
+  width: 250px;
+  background-color: #2c3e50; /* Same as the toolbar */
+  color: white;
+  position: fixed;
+  top: 56px; /* Below the toolbar */
+  left: 0;
+  height: calc(100% - 56px); /* Full height below the toolbar */
+  z-index: 1000;
+  border-right: 1px solid #1e3a5f; /* Optional border for separation */
+  overflow-y: auto; /* Scrollable for longer content */
+}
+
+.sidenav-content mat-nav-list a {
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidenav-content mat-nav-list a:hover {
+  background-color: #1e3a5f; /* Highlight on hover */
+  color: #ffdd57;
+}
+
+.sidenav-content mat-nav-list a.active {
+  background-color: #2d5986; /* Active background color */
+  color: #ffdd57;
+  font-weight: bold;
+  border-left: 4px solid #ffdd57; /* Indicator for active link */
+}
+
+/* Main Content Styling */
+mat-sidenav-content {
+  margin-top: 56px; /* Adjust content below the toolbar */
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background for main content */
+  min-height: calc(100% - 56px); /* Ensure it fills the screen */
+  overflow-y: auto; /* Scrollable content */
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .example-button-container button {
-    width: 100%; /* Full width on mobile */
-    margin: 10px 0 0; /* Add margin for spacing */
+  .nav-links {
+    display: none; /* Hide navigation links for mobile */
+  }
+
+  mat-sidenav {
+    width: 250px; /* Sidebar width for mobile */
+  }
+
+  .sidenav-content {
+    position: fixed; /* Fixed position for mobile */
+    height: calc(100% - 56px); /* Full height below the toolbar */
   }
 }
-
-
