@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
-import { ChangeDetectorRef } from '@angular/core';
+import { ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { DOCUMENT } from '@angular/common';
 import { ViewChild } from '@angular/core';
