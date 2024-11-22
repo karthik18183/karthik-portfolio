@@ -1,0 +1,83 @@
+.experience-section {
+    background-color: #f9f9f9; /* Soft light gray background for the section */
+    padding: 5px 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
+    font-size: 1px; /* You can adjust the font size as per your design */
+    color: #333333; /* Text color, adjust as needed */
+  }
+  
+  .job-title {
+    font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
+    font-size: 16px;
+    color: #555; /* Text color, adjust as needed */
+    margin: 10px 0; /* Adjust margin as necessary */
+  }
+
+  .experience-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 34px;
+    margin-bottom: 5px;
+    color: #2c3e50;
+  }
+  
+  .experience-card {
+    background-color: #ffffff; /* White card background for a clean look */
+    color: #555555; /* Neutral gray for the text */
+    padding: 30px;
+    border-radius: 15px; /* Softer rounded corners */
+    max-width: 850px; /* A bit wider for a balanced look */
+    margin: 30px auto;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05); /* Soft shadow for subtle depth */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .experience-card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* A more pronounced shadow on hover */
+  }
+  
+  .company-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Slightly more space for readability */
+  }
+  
+  .company-logo {
+    width: 50px; /* A bit smaller for a cleaner appearance */
+    margin-right: 15px; /* Space between the logo and text */
+  }
+  
+  .company-details h3 {
+    font-size: 20px;
+    color: #2d89ef; /* Calming blue for the company name */
+    margin-bottom: 5px; /* Small space below */
+  }
+  
+  .company-details h4 {
+    font-size: 18px;
+    color: #f39c12; /* Soft orange for the job title */
+    margin-top: 0; /* Tighten space between company name and job title */
+  }
+  
+  .experience-details {
+    padding-left: 20px;
+    list-style: none;
+    font-size: 16px; /* Larger and more readable text */
+    line-height: 1.8; /* Increased line spacing for better readability */
+    color: #666666; /* Softer gray for content */
+  }
+  
+  .experience-details li {
+    margin-bottom: 12px; /* Small space between list items */
+    position: relative;
+  }
+  
+  .experience-details li::before {
+    content: '•';
+    color: #2d89ef; /* Same blue as the company name for consistency */
+    position: absolute;
+    left: -25px;
+    font-size: 20px; /* Larger bullet point */
+  }

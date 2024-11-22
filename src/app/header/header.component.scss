@@ -1,0 +1,151 @@
+/* General Styling */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding-top: 60px; /* Adjust body padding to account for fixed header */
+  }
+  
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2c3e50; /* Dark background color */
+    z-index: 1000; /* Ensure it's always on top */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    height: 60px; /* Set a fixed height */
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Adjust padding for consistent spacing */
+    width: 100%; /* Span the full width */
+    max-width: 1200px; /* Limit the navbar content width */
+    margin: 0 auto; /* Center navbar content */
+  }
+  
+  /* Logo Styling */
+  .logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #f4b400; /* Yellow hover effect */
+  }
+  
+  /* Mobile Menu Icon */
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px auto;
+    transition: all 0.3s;
+  }
+  
+  /* Close Menu Styling */
+  .close-menu {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+    display: none; /* Hide by default */
+  }
+  
+  .close-menu:hover {
+    color: #f4b400;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+  
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: 0;
+      background-color: #2c3e50;
+      flex-direction: column;
+      height: 100vh;
+      width: 250px; /* Sidebar width */
+      justify-content: center;
+      align-items: center;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+  
+    .nav-links.active {
+      transform: translateX(0); /* Slide menu into view */
+    }
+  
+    .nav-links li {
+      margin: 20px 0; /* Add spacing between items */
+    }
+  
+    .nav-links a {
+      font-size: 18px; /* Adjust font size for better readability */
+    }
+  
+    .menu-icon.active .bar:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+  
+    .menu-icon.active .bar:nth-child(2) {
+      opacity: 0; /* Hide middle bar */
+    }
+  
+    .menu-icon.active .bar:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  
+    .close-menu {
+      display: block; /* Show close button in mobile view */
+    }
+  }
+  
